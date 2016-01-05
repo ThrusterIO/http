@@ -1,0 +1,28 @@
+{
+  "request_method": "POST",
+  "protocol_version": "1.1",
+  "body": "4_json_post_request.body",
+  "headers": {
+    "Host": ["127.0.0.1:9090"],
+    "Connection": ["keep-alive"],
+    "Accept": ["*/*"],
+    "Content-Type": ["application/json"],
+    "Content-Length": [23],
+    "User-Agent": ["Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36"],
+    "Accept-Encoding": ["gzip, deflate"],
+    "Accept-Language": ["en-US,en;q=0.8"]
+  },
+  "uri": {
+    "scheme": "http",
+    "user_info": "",
+    "host": "127.0.0.1",
+    "port": 9090,
+    "path": "/foo_bar",
+    "query": "",
+    "fragment": ""
+  },
+  "query_params": [],
+  "cookie_params": [],
+  "server_params": [],
+  "uploaded_files": []
+}

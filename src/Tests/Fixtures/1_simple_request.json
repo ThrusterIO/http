@@ -1,0 +1,20 @@
+{
+  "request_method": "GET",
+  "protocol_version": "1.1",
+  "headers": {
+    "Host": ["foo.bar"]
+  },
+  "uri": {
+    "scheme": "http",
+    "user_info": "",
+    "host": "foo.bar",
+    "port": null,
+    "path": "/",
+    "query": "",
+    "fragment": ""
+  },
+  "query_params": [],
+  "cookie_params": [],
+  "server_params": [],
+  "uploaded_files": []
+}
