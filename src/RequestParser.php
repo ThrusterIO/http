@@ -8,7 +8,7 @@ use Thruster\Component\Http\Exception\BadRequestException;
 use Thruster\Component\Http\Exception\RequestEntityTooLargeException;
 use Thruster\Component\Http\Exception\RequestHTTPVersionNotSupported;
 use Thruster\Component\Http\Exception\RequestURITooLongException;
-use Thruster\Component\Stream\StreamInterface;
+use Thruster\Component\HttpMessage\ServerRequest;
 
 /**
  * Class RequestParser
@@ -33,12 +33,12 @@ class RequestParser implements EventEmitterInterface
     protected $receivedHead;
 
     /**
-     * @var resource
+     * @var string
      */
     protected $head;
 
     /**
-     * @var string
+     * @var resource
      */
     protected $body;
 
@@ -185,20 +185,13 @@ class RequestParser implements EventEmitterInterface
     {
         rewind($this->body);
 
-        $request = new ServerRequest(
-            [],
-            [],
-            $this->uri,
+        return new ServerRequest(
             $this->httpMethod,
-            $this->body,
+            $this->uri,
             $this->headers,
-            [],
-            [],
-            null,
+            $this->body,
             $this->protocolVersion
         );
-
-        return $request;
     }
 
     protected function isRequestFinished() : bool
